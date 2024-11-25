@@ -26,6 +26,21 @@ function activate(context) {
 		TextPacket: [
             { name: 'getMessage', description: 'getMessage returns received message', type: 1 },
             { name: 'getType', description: 'getType returns text packet types', type: 1 },
+        ],
+		Player: [
+            { name: 'getPlayerName', description: 'Returns the name of the player', type: 1 },
+            { name: 'getX', description: "Returns player's X-coordinate", type: 1 },
+			{ name: 'getY', description: "Returns player's Y-coordinate", type: 1 },
+			{ name: 'getZ', description: "Returns player's Z-coordinate", type: 1 },
+			{ name: 'isOnGround', description: "True/False, player is on ground", type: 1 },
+        ],
+		Constraints: [
+            { name: 'PercentageConstraint', description: 'Calculates a percentage-based constraint', type: 1 },
+            { name: 'RelativeConstraint', description: 'Calculates a relative constraint', type: 1 },
+			{ name: 'CenterConstraint', description: 'Calculates the center position', type: 1 },
+			{ name: 'RoundingConstraint', description: 'Calculates rounding constraints for radius X and Y', type: 1 },
+			{ name: 'FontScaler', description: 'Scales the font size based on a dimension', type: 1 },
+			{ name: 'CalculatePercentage', description: 'Calculates percentage-based positions for X and Y', type: 1 },
         ]
     };
 
