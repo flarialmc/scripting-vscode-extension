@@ -29,6 +29,23 @@ jobs:
 
       - name: Build VSCode Extension
         run: vsce package  # This will generate the .vsix package of your extension
+        
+      - name: Get package version
+        id: get_version
+        run: echo "PACKAGE_VERSION=$(cat package.json | jq -r '.version')" >> $GITHUB_ENV
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v${{ env.PACKAGE_VERSION }} 
+          release_name: Release v${{ env.PACKAGE_VERSION }} 
+          body: |
+            This is the release for version v${{ env.PACKAGE_VERSION }} of the extension.
+          draft: false  
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload VSCode Extension as Artifact
         uses: actions/upload-artifact@v3
