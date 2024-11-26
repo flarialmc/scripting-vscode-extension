@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: './*.vsix' 
+          asset_path: '*.vsix'
           asset_name: 'Flarial Flarial scripting extention.vsix' 
           asset_content_type: 'application/octet-stream'
           
