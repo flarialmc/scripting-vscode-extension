@@ -1,0 +1,37 @@
+name: Build and Upload VSCode Extension as Artifact
+
+on:
+  push:
+    branches:
+      - main  # Trigger the action when pushing to the main branch (adjust if you use a different branch)
+  pull_request:
+    branches:
+      - main  # Trigger the action when a PR is opened to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can change this to 'windows-latest' or 'macos-latest' if needed
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # Change Node.js version to 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install VSCE
+        run: npm install -g @vscode/vsce
+
+      - name: Build VSCode Extension
+        run: vsce package  # This will generate the .vsix package of your extension
+
+      - name: Upload VSCode Extension as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: vscode-extension  # Name of the artifact (you can change this)
+          path: '*.vsix'  # Path to the .vsix file (adjust this if your file is in a subdirectory)

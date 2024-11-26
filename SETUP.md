@@ -18,3 +18,9 @@
 1. **To build your extension, simply run:**
     ```plaintext
     vsce package
+   ```
+
+# Installation
+```
+code --install-extension flarial.vsix
+```
