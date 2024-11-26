@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: 'flarial-scripting-${{ env.PACKAGE_VERSION }}.vsix'
+          asset_path: './flarial-scripting-${{ env.PACKAGE_VERSION }}.vsix'
           asset_name: 'flarial-scripting-${{ env.PACKAGE_VERSION }}.vsix'
           asset_content_type: 'application/octet-stream'
           
