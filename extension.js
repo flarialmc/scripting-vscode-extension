@@ -41,7 +41,16 @@ function activate(context) {
 			{ name: 'RoundingConstraint', description: 'Calculates rounding constraints for radius X and Y', type: 1 },
 			{ name: 'FontScaler', description: 'Scales the font size based on a dimension', type: 1 },
 			{ name: 'CalculatePercentage', description: 'Calculates percentage-based positions for X and Y', type: 1 },
-        ]
+        ],
+		Client: [
+            { name: 'setMouseVisible', description: 'locks or unlocks mouse', type: 1 },
+        ],
+		ModuleManager: [
+            { name: 'GetModuleByName', description: 'returns module', type: 1 },
+        ],
+		ModuleSettings: [
+            { name: 'GetSetting', description: 'returns setting of other module', type: 1 },
+        ],
     };
 
     const luaCompletionProvider = vscode.languages.registerCompletionItemProvider(
