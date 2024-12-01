@@ -22,6 +22,7 @@ function activate(context) {
             { name: 'RoundedRect', description: 'Draws RoundedRect on screen', type: 1 },
 			{ name: 'TextWithFont', description: 'Draws TextWithFont on screen', type: 1 },
 			{ name: 'RoundedHollowRect', description: 'Draws RoundedHollowRect on screen', type: 1 },
+			{ name: 'RoundedButton', description: 'Draws RoundedButton on screen', type: 1 },
         ],
 		TextPacket: [
             { name: 'getMessage', description: 'getMessage returns received message', type: 1 },
