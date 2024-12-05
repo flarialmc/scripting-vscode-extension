@@ -48,9 +48,16 @@ function activate(context) {
         ],
 		ModuleManager: [
             { name: 'GetModuleByName', description: 'returns module', type: 1 },
+			{ name: 'GetModules', description: 'returns module list', type: 1 },
         ],
 		ModuleSettings: [
             { name: 'GetSetting', description: 'returns setting of other module', type: 1 },
+        ],
+		Module: [
+            { name: 'Toggle', description: 'toggles module', type: 1 },
+			{ name: 'getName', description: 'returns name', type: 1 },
+			{ name: 'getDescription', description: 'returns description', type: 1 },
+			{ name: 'isEnabled', description: 'returns if module is enabled', type: 1 },
         ],
     };
 
@@ -102,6 +109,20 @@ function activate(context) {
 						'\nend)'
 					);
 					completions.push(onEventCompletion);
+
+
+					const onCommandCompletion = new vscode.CompletionItem(
+						'onCommand',
+						vscode.CompletionItemKind.Function
+					);
+					onCommandCompletion.detail = 'onCommand function template';
+					onCommandCompletion.documentation = 'Inserts a template for handling commands';
+					onCommandCompletion.insertText = new vscode.SnippetString(
+						'onCommand("${1}", function()' +
+						'\n	${2}' +
+						'\nend)'
+					);
+					completions.push(onCommandCompletion);
 				}
 			
 				return completions;
