@@ -118,8 +118,8 @@ function activate(context) {
 					onCommandCompletion.detail = 'onCommand function template';
 					onCommandCompletion.documentation = 'Inserts a template for handling commands';
 					onCommandCompletion.insertText = new vscode.SnippetString(
-						'onCommand("${1}", function()' +
-						'\n	${2}' +
+						'onCommand("${1}","${2}", function()' +
+						'\n	${3}' +
 						'\nend)'
 					);
 					completions.push(onCommandCompletion);
