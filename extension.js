@@ -26,8 +26,9 @@ function activate(context) {
 			{ name: 'NormalRender', description: 'NormalRender', type: 1 },
         ],
 		TextPacket: [
-            { name: 'getMessage', description: 'getMessage returns received message', type: 1 },
+            { name: 'getPacket', description: 'getPacket returns received packet', type: 1 },
             { name: 'getType', description: 'getType returns text packet types', type: 1 },
+			{ name: 'sendPacket', description: 'sends textpacket', type: 1 },
         ],
 		Player: [
             { name: 'getPlayerName', description: 'Returns the name of the player', type: 1 },
