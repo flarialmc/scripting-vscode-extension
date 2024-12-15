@@ -25,11 +25,6 @@ function activate(context) {
 			{ name: 'RoundedButton', description: 'Draws RoundedButton on screen', type: 1 },
 			{ name: 'NormalRender', description: 'NormalRender', type: 1 },
         ],
-		TextPacket: [
-            { name: 'getPacket', description: 'getPacket returns received packet', type: 1 },
-            { name: 'getType', description: 'getType returns text packet types', type: 1 },
-			{ name: 'sendPacket', description: 'sends textpacket', type: 1 },
-        ],
 		Player: [
             { name: 'getPlayerName', description: 'Returns the name of the player', type: 1 },
             { name: 'getX', description: "Returns player's X-coordinate", type: 1 },
@@ -60,6 +55,17 @@ function activate(context) {
 			{ name: 'getName', description: 'returns name', type: 1 },
 			{ name: 'getDescription', description: 'returns description', type: 1 },
 			{ name: 'isEnabled', description: 'returns if module is enabled', type: 1 },
+        ],
+		TextPacket: [
+            { name: 'getPacket', description: 'getPacket returns received packet', type: 1 },
+            { name: 'getType', description: 'getType returns text packet types', type: 1 },
+			{ name: 'sendPacket', description: 'sends textpacket', type: 1 },
+        ],
+		SetTitle: [
+            { name: 'getPacket', description: 'getPacket returns received packet', type: 1 },
+        ],
+		PlaySound: [
+            { name: 'getPacket', description: 'getPacket returns received packet', type: 1 },
         ],
     };
 
