@@ -24,6 +24,7 @@ function activate(context) {
 			{ name: 'RoundedHollowRect', description: 'Draws RoundedHollowRect on screen', type: 1 },
 			{ name: 'RoundedButton', description: 'Draws RoundedButton on screen', type: 1 },
 			{ name: 'NormalRender', description: 'NormalRender', type: 1 },
+			{ name: 'getCurrentScreen', description: 'Returns current mc screen', type: 1 },
         ],
 		Player: [
             { name: 'getPlayerName', description: 'Returns the name of the player', type: 1 },
