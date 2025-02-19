@@ -32,6 +32,9 @@ function activate(context) {
 			{ name: 'getY', description: "Returns player's Y-coordinate", type: 1 },
 			{ name: 'getZ', description: "Returns player's Z-coordinate", type: 1 },
 			{ name: 'isOnGround', description: "True/False, player is on ground", type: 1 },
+			{ name: 'getYaw', description: "yaw", type: 1 },
+			{ name: 'getPitch', description: "pitch", type: 1 },
+			{ name: 'getInventory', description: "returns inventory", type: 1 },
         ],
 		Constraints: [
             { name: 'PercentageConstraint', description: 'Calculates a percentage-based constraint', type: 1 },
@@ -67,6 +70,16 @@ function activate(context) {
         ],
 		PlaySound: [
             { name: 'getPacket', description: 'getPacket returns received packet', type: 1 },
+        ],
+		Inventory: [
+            { name: 'getItemStack', description: 'returns itemstack', type: 1 },
+        ],
+		ItemStack: [
+            { name: 'getName', description: 'returns name', type: 1 },
+			{ name: 'getCount', description: 'returns count', type: 1 },
+			{ name: 'getDamage', description: 'returns damage', type: 1 },
+			{ name: 'getMaxDamage', description: 'returns max damage', type: 1 },
+			{ name: 'isEnchanted', description: 'returns item enchanting status', type: 1 },
         ],
     };
 
