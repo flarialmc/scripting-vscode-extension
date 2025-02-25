@@ -71,6 +71,9 @@ function activate(context) {
 		PlaySound: [
             { name: 'getPacket', description: 'getPacket returns received packet', type: 1 },
         ],
+		ChangeDimension: [
+            { name: 'getPacket', description: 'changeDimension returns received packet', type: 1 },
+        ],
 		Inventory: [
             { name: 'getItemStack', description: 'returns itemstack', type: 1 },
         ],
